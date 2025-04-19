@@ -7,48 +7,80 @@ This Power BI project utilizes real-world Apple Store data sourced from Kaggle t
 
 ---
 
-## Dashboard Preview
+##  Project Objectives
 
-
-
-##  Included Datasets
-
-| Dataset      | Description |
-|--------------|-------------|
-| **Sales**    | Transactional data with revenue, quantity, product ID, store ID, and date of sale |
-| **Warranty** | Warranty claims by product, store, status, and claim date |
-| **Products** | Metadata such as product name, price, launch date, and ID |
-| **Categories** | Product groupings like iPhones, iPads, MacBooks, etc. |
-| **Stores**   | Location and regional data for each Apple Store |
+- Analyze sales performance across Apple Stores globally  
+- Identify top-selling products and categories  
+- Evaluate revenue trends and sales volumes over time  
+- Understand geographic distribution of sales  
+- Track product warranty claims and repair outcomes  
+- Build a multi-relational data model for accurate analysis
 
 ---
 
-##  Dashboard Goals
+##  Dataset Structure
 
-- Track sales trends and revenue over time
-- Identify high-performing products and categories
-- Analyze warranty claims to uncover quality issues
-- Compare performance across stores and regions
-- Provide dynamic, interactive filtering capabilities
+The data is divided into 5 related tables, simulating a normalized database schema:
+
+1. ** Category Data**  
+   - `category_id`, `category_name`  
+   - Defines the main product categories (e.g., iPhone, Mac, Accessories)
+
+2. ** Products Data**  
+   - `product_id`, `product_name`, `category_id`, `launch_date`, `price`  
+   - Links each product to its category and tracks launch date and pricing
+
+3. ** Sales Data**  
+   - `sale_id`, `sale_date`, `store_id`, `product_id`, `quantity`  
+   - Transaction-level data capturing store sales over time
+
+4. ** Stores Data**  
+   - `store_id`, `store_name`, `city`, `country`  
+   - Geographical mapping of store locations
+
+5. ** Warranty Data**  
+   - `claim_id`, `claim_date`, `sale_id`, `repair_status`  
+   - Tracks customer claims and repair statuses post-purchase
 
 ---
 
-##  Key Features
+##  Tools & Technologies Used
 
-- **KPIs**: Total Revenue, Units Sold, Average Price, Warranty Rate  
-- **Sales Trends**: Monthly and quarterly revenue tracking  
-- **Product & Category Insights**: Sales by item and category  
-- **Warranty Analysis**: Claims over time, by store and product  
-- **Store Performance**: Region-wise performance comparison with maps and visuals  
-- **Filters & Slicers**: By category, store, date, warranty status  
+| Tool        | Purpose                                     |
+|-------------|---------------------------------------------|
+| **Power BI**     | Data visualization & dashboard development     |
+| **Power Query**  | ETL: Data cleaning and transformation          |
+| **DAX**          | Custom measures, calculated columns, KPIs      |
 
 ---
 
-##  Tools Used
+##  Dashboard Features
 
-- **Power BI Desktop** – for report creation and visualization
-- **Power Query** – for data transformation and cleaning
-- **DAX** – for custom measures and KPIs
+-  **Revenue & Quantity Analysis**  
+  Total revenue and units sold by product, category, and region
+
+-  **Time Series Breakdown**  
+  Sales trends over months and years with dynamic date filters
+
+-  **Store Performance**  
+  Compare store-level sales and highlight top/bottom performers
+
+-  **Regional Insights**  
+  Map visualizations of sales by country and city
+
+-  **Warranty Tracking**  
+  View number of warranty claims by product and repair status
+
+---
+
+##  Dashboard Preview
+
+
+![store](https://github.com/user-attachments/assets/1e935a61-8f6c-4570-ad70-ce92560c0e0b)
+
+![sales](https://github.com/user-attachments/assets/3b75856c-3496-4028-acc7-cd1c15a9f8a3)
+
+![warranty](https://github.com/user-attachments/assets/a591f908-ae85-4a51-a508-2ef8fb390cc0)
 
 ---
 
