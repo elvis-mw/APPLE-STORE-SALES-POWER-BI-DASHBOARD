@@ -1,13 +1,17 @@
 
-# 🍏 Apple Store Dashboard – Power BI Project
+#  Apple Store Dashboard – Power BI Project
 
-## 📊 Project Summary
+##  Project Summary
 
-This Power BI dashboard delivers a detailed analysis of Apple Store operations, including product sales, warranty claims, product categories, and store performance. It is designed to support data-driven decision-making for sales, operations, and product management teams.
+This Power BI project utilizes real-world Apple Store data sourced from Kaggle to provide a comprehensive analysis of business performance, including sales trends, product performance, warranty claims, and store-level operations. The report integrates multiple datasets to create a unified view of Apple Store activities, enabling interactive exploration and decision-making through dynamic filters and visualizations.
 
 ---
 
-## 📂 Included Datasets
+## Dashboard Preview
+
+
+
+##  Included Datasets
 
 | Dataset      | Description |
 |--------------|-------------|
@@ -19,7 +23,7 @@ This Power BI dashboard delivers a detailed analysis of Apple Store operations, 
 
 ---
 
-## 🎯 Dashboard Goals
+##  Dashboard Goals
 
 - Track sales trends and revenue over time
 - Identify high-performing products and categories
@@ -29,7 +33,7 @@ This Power BI dashboard delivers a detailed analysis of Apple Store operations, 
 
 ---
 
-## 📈 Key Features
+##  Key Features
 
 - **KPIs**: Total Revenue, Units Sold, Average Price, Warranty Rate  
 - **Sales Trends**: Monthly and quarterly revenue tracking  
@@ -40,29 +44,7 @@ This Power BI dashboard delivers a detailed analysis of Apple Store operations, 
 
 ---
 
-## 🧠 Sample DAX Measures
-
-```DAX
-Total Sales = SUM(Sales[Revenue])
-Units Sold = SUM(Sales[Quantity])
-Average Price = [Total Sales] / [Units Sold]
-Total Claims = COUNT(Warranty[ClaimID])
-Warranty Rate = [Total Claims] / [Units Sold]
-```
-
----
-
-## 🔗 Data Model
-
-The model follows a **star schema**:
-- Fact Tables: `Sales`, `Warranty`
-- Dimension Tables: `Products`, `Categories`, `Stores`
-
-Relationships are defined via primary keys such as `ProductID` and `StoreID`.
-
----
-
-## 🛠 Tools Used
+##  Tools Used
 
 - **Power BI Desktop** – for report creation and visualization
 - **Power Query** – for data transformation and cleaning
@@ -70,19 +52,12 @@ Relationships are defined via primary keys such as `ProductID` and `StoreID`.
 
 ---
 
-## 🚀 How to Use
+##  How to view / use this dashboard.
 
-1. Open the `Apple Store Power BI Report.pbix` file in Power BI Desktop.
-2. Use filters and slicers to explore data from different angles.
-3. Refresh data or modify visuals as needed for custom analysis.
+1. **Clone or Download** this repository  
+2. Open the `.pbix` file using [Power BI Desktop](https://powerbi.microsoft.com/desktop/)  
+3. Explore the dashboard by interacting with slicers, visuals, and tooltips  
+4. Refresh the dataset or connect to a live API to keep it current
 
----
 
-## 📬 Contact
-
-Created by **[Your Name]**  
-📧 Email: [your.email@example.com]  
-🔗 LinkedIn: [Your LinkedIn Profile]  
-🌐 Portfolio: [Optional]
-
----
+*END*
